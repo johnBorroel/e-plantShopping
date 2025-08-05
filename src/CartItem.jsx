@@ -48,10 +48,6 @@ const CartItem = ({ onContinueShopping }) => {
     return parseFloat(cost.substring(1)) * quantity;
   };
 
-  const calculateTotalQuantity = () => {
-    return cart.items ? cart.items.reduce((total, item) => total + item.quantity, 0) : 0;
-}
-
   return (
     <div className="cart-container">
       <h2 style={{ color: 'black' }}>Total Cart Amount: ${calculateTotalAmount()}</h2>
